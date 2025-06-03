@@ -1,0 +1,239 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 15px 20px;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+}
+
+.input-group-text {
+    border-radius: 8px 0 0 8px;
+}
+
+.bg-primary {
+    background-color: #4e73df !important;
+}
+
+.bg-success {
+    background-color: #1cc88a !important;
+}
+
+.bg-danger {
+    background-color: #e74a3b !important;
+}
+
+.text-success {
+    color: #1cc88a !important;
+}
+
+.text-danger {
+    color: #e74a3b !important;
+}
+
+.badge {
+    padding: 6px 10px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.badge-income {
+    background-color: rgba(28, 200, 138, 0.1);
+    color: #1cc88a;
+}
+
+.badge-expense {
+    background-color: rgba(231, 74, 59, 0.1);
+    color: #e74a3b;
+}
+
+.income-amount {
+    color: #1cc88a;
+    font-weight: 600;
+}
+
+.expense-amount {
+    color: #e74a3b;
+    font-weight: 600;
+}
+
+.category-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    background-color: #e9ecef;
+    color: #495057;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 15px;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for view switching */
+.view-transition {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Budget progress bars */
+.budget-progress {
+    position: relative;
+}
+
+.budget-progress .progress-bar-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(231, 74, 59, 0.3);
+}
+
+/* Settings tabs */
+.nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: #4e73df;
+    border-bottom: 2px solid #4e73df;
+    background-color: transparent;
+}
+
+/* Category list items */
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.category-item .delete-category {
+    color: #e74a3b;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.category-item .delete-category:hover {
+    opacity: 1;
+}
+
+/* Dark mode - can be toggled via JavaScript */
+body.dark-mode {
+    background-color: #2a3042;
+    color: #f8f9fa;
+}
+
+.dark-mode .card {
+    background-color: #343a40;
+    color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .table {
+    color: #f8f9fa;
+}
+
+.dark-mode .table th {
+    color: #dee2e6;
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #495057;
+    border-color: #6c757d;
+    color: #f8f9fa;
+}
+
+.dark-mode .input-group-text {
+    background-color: #6c757d;
+    color: #f8f9fa;
+    border-color: #6c757d;
+}
+
+.dark-mode .category-item {
+    background-color: #495057;
+}
+/* Chart container styling */
+.card-body canvas {
+    max-height: 250px;
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Adjust card body padding for charts */
+.card-body {
+    padding: 1rem;
+}
